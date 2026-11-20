@@ -1,6 +1,5 @@
 package com.web.ecomm.model;
 
-
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,43 +19,41 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
-@Entity 
-@Table(name = "products") 
+@Entity
+@Table(name = "products")
 public class Product {
 
-	@Id 
-    @GeneratedValue(strategy = GenerationType.IDENTITY) 
-    private Long id; 
- 
-    @Column(nullable = false, length = 150) 
-    private String productName; 
- 
-    @Column(length = 2000) 
-    private String description; 
- 
-    @Column(nullable = false, precision = 12, scale = 2) 
-    private BigDecimal price; 
- 
-    @Column(nullable = false) 
-    private Integer stockQuantity; 
- 
-    private String imagePath;
-    
-    public Product() {
-    	
-    }
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="category_id")
-    @JsonBackReference
-    private Category category;
-    
-    @OneToMany(mappedBy = "product")
-    @JsonIgnore
-    private List<CartItem> items=new ArrayList<CartItem>();
-    
-    @OneToMany(mappedBy = "product")
-    @JsonIgnore
-    private List<OrderItem> orders =new ArrayList<OrderItem>();
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	@Column(nullable = false, length = 150)
+	private String productName;
+
+	@Column(length = 2000)
+	private String description;
+
+	@Column(nullable = false, precision = 12, scale = 2)
+	private BigDecimal price;
+
+	@Column(nullable = false)
+	private Integer stockQuantity;
+
+	private String imagePath;
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "category_id")
+	private Category category;
+
+	@OneToMany(mappedBy = "product")
+	private List<CartItem> items = new ArrayList<CartItem>();
+
+	@OneToMany(mappedBy = "product")
+	private List<OrderItem> orders = new ArrayList<OrderItem>();
+
+	public Product() {
+
+	}
 
 	public Long getId() {
 		return id;
@@ -113,6 +110,5 @@ public class Product {
 	public void setCategory(Category category) {
 		this.category = category;
 	}
-    
-    
+
 }

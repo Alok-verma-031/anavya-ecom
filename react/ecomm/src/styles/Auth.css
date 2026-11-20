@@ -1,0 +1,118 @@
+
+.errorMessage
+{
+   min-height: 46px !important;
+   background-color: rgba(183, 65, 65, 0.08);
+    border: 1px solid #7f635f !important;
+    border-radius: 7px !important;
+    padding: 10px 1px !important;
+    margin-bottom: 10px ;
+    font-size: 16px !important; 
+    color:#a4210f;
+    text-align: center !important;
+}
+/* Main section */
+.auth-section {
+    min-height: 85vh !important;
+    background: #f8f6f1 !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* Form background */
+.auth-background {
+    min-height: 85vh !important;
+    background: #f8f6f1 !important;
+}
+
+/* Login/Register Card */
+.auth-card {
+    border: 1px solid #e8dfce !important;
+    border-radius: 14px !important;
+    background: #ffffff !important;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Heading */
+.auth-title {
+    font-family: Georgia, serif !important;
+    font-size: 32px !important;
+    font-weight: 600 !important;
+    color: #171717 !important;
+}
+
+/* Labels */
+.auth-card .form-label {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: #333 !important;
+}
+
+/* Inputs */
+.auth-input {
+    min-height: 46px !important;
+    border: 1px solid #ded8cc !important;
+    border-radius: 7px !important;
+    padding: 10px 13px !important;
+    font-size: 14px !important;
+}
+
+.auth-input:focus {
+    border-color: #bd9852 !important;
+    box-shadow: 0 0 0 0.2rem rgba(189, 152, 82, 0.15) !important;
+    outline: none !important;
+}
+
+/* Button */
+.auth-btn {
+    min-height: 47px !important;
+    background: #171717 !important;
+    color: #d4af69 !important;
+    border: 1px solid #171717 !important;
+    border-radius: 7px !important;
+    font-weight: 600 !important;
+    transition: 0.3s ease !important;
+    cursor: pointer !important;
+}
+
+.auth-btn:hover {
+    background: #bd9852 !important;
+    border-color: #bd9852 !important;
+    color: #ffffff !important;
+}
+
+/* Login/Register switch */
+.auth-switch {
+    font-size: 13px !important;
+    color: #777 !important;
+}
+
+.auth-switch a {
+    color: #96743a !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+}
+
+.auth-switch a:hover {
+    color: #171717 !important;
+    text-decoration: underline !important;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    .auth-section,
+    .auth-background {
+        min-height: 80vh !important;
+    }
+
+    .auth-card {
+        padding: 22px !important;
+    }
+
+    .auth-title {
+        font-size: 27px !important;
+    }
+}
+html,body{
+    overflow-x: hidden;
+}

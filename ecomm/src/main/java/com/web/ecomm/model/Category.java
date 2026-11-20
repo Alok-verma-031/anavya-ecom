@@ -23,6 +23,7 @@ public class Category {
 	
 	@Column(nullable = false, unique = true)
 	private String categoryName;
+	private String imagePath;
 	private String description; 
 	
 	@OneToMany(mappedBy = "category")
@@ -63,6 +64,14 @@ public class Category {
 
 	public void setProducts(List<Product> products) {
 		this.products = products;
+	}
+
+	public String getImagePath() {
+		return imagePath;
+	}
+
+	public void setImagePath(String imagePath) {
+		this.imagePath = imagePath;
 	}
 	
 	

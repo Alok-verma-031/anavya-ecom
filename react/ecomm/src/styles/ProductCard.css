@@ -1,0 +1,129 @@
+.fk-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 24px;
+}
+
+.fk-card {
+  width: 242px;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  border: 1px solid goldenrod;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.fk-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Tall Portrait Image Box */
+.fk-image-box {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  background: #ffffff;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.fk-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit:fill;
+  display: block;
+}
+
+/* Top-Right Heart Icon */
+.fk-wish-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  line-height: 1;
+  color: #c2c2c2;
+  cursor: pointer;
+  padding: 0;
+  z-index: 2;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.fk-wish-btn:hover {
+  transform: scale(1.12);
+}
+
+.fk-wish-btn.active {
+  color: #e11d48;
+}
+
+/* Bottom Details */
+.fk-body {
+  padding: 12px 10px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.fk-brand {
+  font-size: 12px;
+  font-weight: 700;
+  color: #878787;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 4px;
+}
+
+.fk-title {
+  font-size: 14px;
+  font-weight: 400;
+  color: #212121;
+  margin: 0 0 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.fk-price-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.fk-price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #212121;
+}
+
+.fk-mrp {
+  font-size: 13px;
+  color: #878787;
+  text-decoration: line-through;
+}
+
+/* Gold Theme Discount & Badge */
+.fk-discount {
+  font-size: 13px;
+  font-weight: 700;
+  color: #b88924;
+}
+
+.fk-deal-badge {
+  display: inline-block;
+  background: #fbf3df;
+  color: #9c7218;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 4px;
+}

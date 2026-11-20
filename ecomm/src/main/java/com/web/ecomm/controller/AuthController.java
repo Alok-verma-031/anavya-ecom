@@ -46,10 +46,10 @@ public class AuthController {
 		try {
 			User user = userService.userRegister(request);
 			response.put("message", "User Registered Successfully !");
-			response.put("User Id", user.getId());
-			response.put("User Name", user.getName());
-			response.put("User Email", user.getEmail());
-			response.put("User Role", user.getRole());
+			response.put("id", user.getId());
+			response.put("name", user.getName());
+			response.put("email", user.getEmail());
+			response.put("role", user.getRole());
 
 			return ResponseEntity.status(HttpStatus.CREATED).body(response);
 		} catch (IllegalArgumentException ex) {
